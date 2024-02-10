@@ -4,7 +4,7 @@
     <property name="java.specification.version" value="18"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\Tanish\Documents\GitHub\Software_Quality\SOFE_3980_Final_Project\BinaryCalculator\target\test-classes;C:\Users\Tanish\Documents\GitHub\Software_Quality\SOFE_3980_Final_Project\BinaryCalculator\target\classes;C:\Users\Tanish\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\Tanish\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Tanish\.m2\repository\joda-time\joda-time\2.9.2\joda-time-2.9.2.jar;"/>
+    <property name="java.class.path" value="C:\Users\Tanish\Documents\GitHub\Software_Quality\SOFE3490-Lab2\BinaryCalculator\target\test-classes;C:\Users\Tanish\Documents\GitHub\Software_Quality\SOFE3490-Lab2\BinaryCalculator\target\classes;C:\Users\Tanish\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\Tanish\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Tanish\.m2\repository\joda-time\joda-time\2.9.2\joda-time-2.9.2.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,9 +15,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-18.0.2.1\bin"/>
-    <property name="sun.java.command" value="C:\Users\Tanish\AppData\Local\Temp\surefire11082846117834265163\surefirebooter1218552269304682522.jar C:\Users\Tanish\AppData\Local\Temp\surefire11082846117834265163 2024-01-29T02-22-18_051-jvmRun1 surefire11257861216063883209tmp surefire_010791109672202657919tmp"/>
+    <property name="sun.java.command" value="C:\Users\Tanish\AppData\Local\Temp\surefire12871256480654907060\surefirebooter16612451609448967657.jar C:\Users\Tanish\AppData\Local\Temp\surefire12871256480654907060 2024-02-10T18-32-07_946-jvmRun1 surefire2267349130936068993tmp surefire_015827166623566973062tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\Tanish\Documents\GitHub\Software_Quality\SOFE_3980_Final_Project\BinaryCalculator\target\test-classes;C:\Users\Tanish\Documents\GitHub\Software_Quality\SOFE_3980_Final_Project\BinaryCalculator\target\classes;C:\Users\Tanish\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\Tanish\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Tanish\.m2\repository\joda-time\joda-time\2.9.2\joda-time-2.9.2.jar;"/>
+    <property name="surefire.test.class.path" value="C:\Users\Tanish\Documents\GitHub\Software_Quality\SOFE3490-Lab2\BinaryCalculator\target\test-classes;C:\Users\Tanish\Documents\GitHub\Software_Quality\SOFE3490-Lab2\BinaryCalculator\target\classes;C:\Users\Tanish\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\Tanish\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Tanish\.m2\repository\joda-time\joda-time\2.9.2\joda-time-2.9.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Tanish"/>
     <property name="user.language" value="en"/>
@@ -25,12 +25,12 @@
     <property name="java.version.date" value="2022-08-18"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-18.0.2.1"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="C:\Users\Tanish\Documents\GitHub\Software_Quality\SOFE_3980_Final_Project\BinaryCalculator"/>
+    <property name="basedir" value="C:\Users\Tanish\Documents\GitHub\Software_Quality\SOFE3490-Lab2\BinaryCalculator"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Tanish\AppData\Local\Temp\surefire11082846117834265163\surefirebooter1218552269304682522.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Tanish\AppData\Local\Temp\surefire12871256480654907060\surefirebooter16612451609448967657.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="18.0.2.1+1-1"/>
@@ -44,7 +44,7 @@
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="C:\Users\Tanish\AppData\Local\Temp\"/>
     <property name="java.version" value="18.0.2.1"/>
-    <property name="user.dir" value="C:\Users\Tanish\Documents\GitHub\Software_Quality\SOFE_3980_Final_Project\BinaryCalculator"/>
+    <property name="user.dir" value="C:\Users\Tanish\Documents\GitHub\Software_Quality\SOFE3490-Lab2\BinaryCalculator"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
@@ -58,7 +58,7 @@
   </properties>
   <testcase name="constructorWithInvalidDigits" classname="com.ontariotechu.sofe3980U.BinaryTest" time="0"/>
   <testcase name="multiply1" classname="com.ontariotechu.sofe3980U.BinaryTest" time="0"/>
-  <testcase name="multiply2" classname="com.ontariotechu.sofe3980U.BinaryTest" time="0.001"/>
+  <testcase name="multiply2" classname="com.ontariotechu.sofe3980U.BinaryTest" time="0"/>
   <testcase name="multiply3" classname="com.ontariotechu.sofe3980U.BinaryTest" time="0"/>
   <testcase name="add" classname="com.ontariotechu.sofe3980U.BinaryTest" time="0"/>
   <testcase name="or1" classname="com.ontariotechu.sofe3980U.BinaryTest" time="0"/>
@@ -73,7 +73,7 @@
   <testcase name="and3" classname="com.ontariotechu.sofe3980U.BinaryTest" time="0"/>
   <testcase name="constructorWithNegativeSign" classname="com.ontariotechu.sofe3980U.BinaryTest" time="0"/>
   <testcase name="constructorWithInvalidChars" classname="com.ontariotechu.sofe3980U.BinaryTest" time="0"/>
-  <testcase name="constructorEmptyString" classname="com.ontariotechu.sofe3980U.BinaryTest" time="0"/>
-  <testcase name="normalConstructor" classname="com.ontariotechu.sofe3980U.BinaryTest" time="0.001"/>
+  <testcase name="constructorEmptyString" classname="com.ontariotechu.sofe3980U.BinaryTest" time="0.001"/>
+  <testcase name="normalConstructor" classname="com.ontariotechu.sofe3980U.BinaryTest" time="0"/>
   <testcase name="constructorWithZeroTailing" classname="com.ontariotechu.sofe3980U.BinaryTest" time="0"/>
 </testsuite>
