@@ -28,20 +28,47 @@ public class HelloControllerTest {
     @Autowired
     private MockMvc mvc;
 
-   
     @Test
     public void getDefault() throws Exception {
         this.mvc.perform(get("/hello"))
-		.andExpect(status().isOk())
-		.andExpect(view().name("hello"))
-		.andExpect(model().attribute("name", "World"));
+                .andExpect(status().isOk())
+                .andExpect(view().name("hello"))
+                .andExpect(model().attribute("name", "World"));
     }
-	
+
     @Test
     public void helloWithName() throws Exception {
         this.mvc.perform(get("/hello?name=Doe"))
-		.andExpect(status().isOk())
-		.andExpect(view().name("hello"))
-		.andExpect(model().attribute("name", "Doe"));
+                .andExpect(status().isOk())
+                .andExpect(view().name("hello"))
+                .andExpect(model().attribute("name", "Doe"));
     }
+
+    // Adding one test with leading and trailing whitespace
+    @Test
+    public void helloWithWhitespaceInName() throws Exception {
+        this.mvc.perform(get("/hello?name= John "))
+                .andExpect(status().isOk())
+                .andExpect(view().name("hello"))
+                .andExpect(model().attribute("name", " John "));
+    }
+
+    // Adding one test with null name
+    @Test
+    public void helloWithEmptyName() throws Exception {
+        this.mvc.perform(get("/hello?name="))
+                .andExpect(status().isOk())
+                .andExpect(view().name("hello"))
+                .andExpect(model().attribute("name", "World"));
+    }
+
+    // Adding one test with special character in name
+    @Test
+    public void helloWithSpecialCharacterInName() throws Exception {
+        this.mvc.perform(get("/hello?name=John!"))
+                .andExpect(status().isOk())
+                .andExpect(view().name("hello"))
+                .andExpect(model().attribute("name", "John!"));
+    }
+
 }
