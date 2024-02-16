@@ -77,4 +77,32 @@ public class HelloAPIControllerTest {
             .andExpect(MockMvcResultMatchers.jsonPath("$.name").value("Jack Sparrow"))
 			.andExpect(MockMvcResultMatchers.jsonPath("$.suggestedEmail").value("Jack.Sparrow@OntarioTechU.net"));
     }
+	
+	// Test with middle name
+    @Test
+    public void EmailAPIWithFullNameAndMiddleName() throws Exception {
+        this.mvc.perform(get("/emailAPI").param("fname", "John").param("mname", "Doe").param("lname", "Sparrow"))
+                .andExpect(status().isOk())
+                .andExpect(MockMvcResultMatchers.jsonPath("$.name").value("John Sparrow"))
+                .andExpect(
+                        MockMvcResultMatchers.jsonPath("$.suggestedEmail").value("John.Sparrow@OntarioTechU.net"));
+    }
+
+    // Test with speacial characters in name
+    @Test
+    public void EmailAPIWithSpecialCharactersInName() throws Exception {
+        this.mvc.perform(get("/emailAPI").param("fname", "John$").param("lname", "Sparrow"))
+                .andExpect(status().isOk())
+                .andExpect(MockMvcResultMatchers.jsonPath("$.name").value("John$ Sparrow"))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.suggestedEmail").value("John$.Sparrow@OntarioTechU.net"));
+    }
+
+    // Test with numbers in name
+    @Test
+    public void EmailAPIWithNumbersInName() throws Exception {
+        this.mvc.perform(get("/emailAPI").param("fname", "John123").param("lname", "Sparrow"))
+                .andExpect(status().isOk())
+                .andExpect(MockMvcResultMatchers.jsonPath("$.name").value("John123 Sparrow"))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.suggestedEmail").value("John123.Sparrow@OntarioTechU.net"));
+    }
 }
