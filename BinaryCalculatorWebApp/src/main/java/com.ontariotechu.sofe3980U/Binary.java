@@ -79,4 +79,66 @@ public class Binary
 		return result;
 		
 	}
+	
+	// Function to preform Bitwise OR operation
+	public static Binary or(Binary num1, Binary num2) {
+		int len1 = num1.number.length();
+		int len2 = num2.number.length();
+		int maxlen = Math.max(len1, len2);
+
+		String num3 = "";
+		for (int i = 0; i < maxlen; i++) {
+			char chp1 = (i < len1) ? num1.number.charAt(len1 - 1 - i) : '0'; // character pointer 1 iterates throught
+																				// all of the digits in number 1
+			char chp2 = (i < len2) ? num2.number.charAt(len2 - 1 - i) : '0'; // character pointer 2 iterates throught
+																				// all of the digits in number 2
+			if (chp1 == '1' || chp2 == '1') {
+				num3 = '1' + num3; // if either of the digits are 1, then the result is 1
+			} else {
+				num3 = '0' + num3; // if both of the digits are 0, then the result is 0
+			}
+		}
+		Binary result = new Binary(num3);
+		return result;
+	}
+
+	// Function to preform Bitwise AND operation
+	public static Binary and(Binary num1, Binary num2) {
+		int len1 = num1.number.length();
+		int len2 = num2.number.length();
+		int maxlen = Math.max(len1, len2);
+
+		String num3 = "";
+		for (int i = 0; i < maxlen; i++) {
+			char chp1 = (i < len1) ? num1.number.charAt(len1 - 1 - i) : '0'; // character pointer 1 iterates throught
+																				// all of the digits in number 1
+			char chp2 = (i < len2) ? num2.number.charAt(len2 - 1 - i) : '0'; // character pointer 2 iterates throught
+																				// all of the digits in number 2
+			if (chp1 == '1' && chp2 == '1') {
+				num3 = '1' + num3; // if both of the digits are 1, then the result is 1
+			} else {
+				num3 = '0' + num3; // if either of the digits are 0, then the result is 0
+			}
+		}
+		Binary result = new Binary(num3);
+		return result;
+	}
+
+	// Function to perform two Binary numbers assuming they are in the order of
+	// (multiplicand, multiplier)
+	public static Binary multiply(Binary num1, Binary num2) {
+		int len2 = num2.number.length(); // length of the multiplier
+		Binary result = new Binary("0");
+		for (int i = 0; i < len2; i++) {
+			char chp2 = num2.number.charAt(len2 - 1 - i);
+			if (chp2 == '1') {
+				Binary temp = new Binary(num1.number); // a temporary binary object to store the value of num1
+				for (int j = 0; j < i; j++) { // shift temp to the left by i digits
+					temp = new Binary(temp.number + "0"); // Shift temp to the left by adding a '0'
+				}
+				result = add(result, temp);
+			}
+		}
+		return result;
+	}
 }	
